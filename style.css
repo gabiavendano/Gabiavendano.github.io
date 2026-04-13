@@ -21,7 +21,7 @@ body {
 
 header {
     background: rgba(255, 255, 255, 0.95);
-    padding: 1.2rem 5%;
+    padding: 1.5rem 0;
     position: fixed;
     width: 100%;
     top: 0;
@@ -30,17 +30,10 @@ header {
 }
 
 nav {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
     max-width: 1100px;
     margin: 0 auto;
-}
-
-nav .logo {
-    font-size: 1.5rem;
-    color: var(--primary);
-    letter-spacing: 1px;
+    display: flex;
+    justify-content: center;
 }
 
 nav ul {
@@ -48,12 +41,15 @@ nav ul {
     list-style: none;
 }
 
-nav ul li { margin-left: 25px; }
+nav ul li { margin: 0 20px; }
 
 nav ul li a {
     text-decoration: none;
     color: var(--dark);
     font-weight: 500;
+    text-transform: uppercase;
+    font-size: 0.9rem;
+    letter-spacing: 1px;
     transition: 0.3s;
 }
 
@@ -65,17 +61,18 @@ nav ul li a:hover { color: var(--primary); }
     align-items: center;
     justify-content: center;
     text-align: center;
-    background: radial-gradient(circle at top right, #e2e8f0, #ffffff);
+    background: linear-gradient(to bottom, #f1f5f9, #ffffff);
     padding-top: 80px;
 }
 
 .hero h1 {
-    font-size: clamp(2.5rem, 5vw, 4rem);
+    font-size: clamp(2rem, 6vw, 3.5rem);
     margin-bottom: 10px;
+    letter-spacing: -1px;
 }
 
 .subtitle {
-    font-size: 1.5rem;
+    font-size: 1.4rem;
     color: var(--primary);
     font-weight: 300;
 }
@@ -83,68 +80,72 @@ nav ul li a:hover { color: var(--primary); }
 .location {
     margin: 15px 0;
     color: var(--gray);
+    font-weight: 400;
 }
 
 .btn {
     display: inline-block;
-    padding: 15px 35px;
-    background: var(--primary);
+    padding: 14px 40px;
+    background: var(--dark);
     color: white;
     text-decoration: none;
-    border-radius: 50px;
-    font-weight: bold;
+    border-radius: 4px;
+    font-weight: 600;
     margin-top: 25px;
-    transition: transform 0.3s, box-shadow 0.3s;
+    transition: background 0.3s;
 }
 
-.btn:hover {
-    transform: translateY(-3px);
-    box-shadow: 0 10px 20px rgba(37, 99, 235, 0.2);
-}
+.btn:hover { background: var(--primary); }
 
 .container {
-    padding: 100px 10%;
-    max-width: 1100px;
+    padding: 120px 10% 80px;
+    max-width: 1000px;
     margin: 0 auto;
 }
 
-.bg-light { background-color: var(--light); }
+.bg-light { background-color: var(--light); max-width: 100%; }
 
 h2 {
-    font-size: 2.2rem;
-    margin-bottom: 40px;
+    font-size: 2rem;
+    margin-bottom: 30px;
     text-align: center;
+    position: relative;
 }
 
-.bio {
-    max-width: 700px;
-    margin: 0 auto;
-    font-size: 1.1rem;
+h2::after {
+    content: '';
+    display: block;
+    width: 50px;
+    height: 3px;
+    background: var(--primary);
+    margin: 10px auto 0;
+}
+
+.bio p {
+    margin-bottom: 20px;
+    font-size: 1.15rem;
+    color: #475569;
     text-align: center;
 }
 
 .grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 30px;
+    margin-top: 40px;
 }
 
 .skill-card {
     background: white;
     padding: 40px;
-    border-radius: 15px;
+    border-radius: 12px;
     text-align: center;
-    box-shadow: 0 4px 6px rgba(0,0,0,0.02);
-    transition: 0.3s;
-}
-
-.skill-card:hover {
-    transform: scale(1.03);
+    box-shadow: 0 10px 15px -3px rgba(0,0,0,0.05);
 }
 
 .icon {
-    font-size: 3rem;
-    margin-bottom: 15px;
+    font-size: 2.5rem;
+    margin-bottom: 20px;
 }
 
 footer {
@@ -156,28 +157,29 @@ footer {
 
 .email-link {
     display: block;
-    font-size: 1.5rem;
-    color: var(--primary);
-    text-decoration: none;
-    margin: 20px 0;
+    font-size: 1.3rem;
+    color: #fff;
+    text-decoration: underline;
+    text-underline-offset: 8px;
+    margin: 25px 0;
 }
 
 .socials a {
-    color: white;
+    color: var(--gray);
     margin: 0 15px;
     text-decoration: none;
-    opacity: 0.7;
+    transition: color 0.3s;
 }
 
-.socials a:hover { opacity: 1; }
+.socials a:hover { color: white; }
 
 .copy {
-    margin-top: 50px;
+    margin-top: 60px;
     font-size: 0.8rem;
-    color: var(--gray);
+    color: #475569;
 }
 
 @media (max-width: 768px) {
-    nav ul { display: none; }
-    .hero h1 { font-size: 2.5rem; }
+    nav ul li { margin: 0 10px; }
+    .hero h1 { font-size: 2.2rem; }
 }
