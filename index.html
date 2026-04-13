@@ -3,222 +3,77 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CS2 Tactical Hub</title>
-    <style>
-        :root {
-            --orange: #ff9d00;
-            --dark-bg: #0b0e11;
-            --card-bg: #1e2124;
-            --text-gray: #a3a3a3;
-        }
-
-        body {
-            font-family: 'Orbitron', sans-serif; /* Un toque futurista */
-            background-color: var(--dark-bg);
-            color: white;
-            margin: 0;
-            scroll-behavior: smooth;
-        }
-
-        /* Barra de Navegación */
-        nav {
-            background: rgba(0, 0, 0, 0.9);
-            padding: 1rem;
-            position: fixed;
-            width: 100%;
-            top: 0;
-            z-index: 1000;
-            border-bottom: 2px solid var(--orange);
-            display: flex;
-            justify-content: space-around;
-        }
-
-        nav a {
-            color: white;
-            text-decoration: none;
-            text-transform: uppercase;
-            font-size: 0.9rem;
-            letter-spacing: 1px;
-            transition: 0.3s;
-        }
-
-        nav a:hover {
-            color: var(--orange);
-        }
-
-        /* Hero Section */
-        .hero {
-            height: 60vh;
-            background: linear-gradient(to bottom, rgba(11,14,17,0.2), var(--dark-bg)), 
-                        url('https://cdn.akamai.steamstatic.com/apps/csgo/images/csgo_react/social/cs2.jpg');
-            background-size: cover;
-            background-position: center;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            text-align: center;
-            padding-top: 60px;
-        }
-
-        .hero h1 {
-            font-size: 4rem;
-            margin: 0;
-            text-shadow: 2px 2px 10px rgba(0,0,0,0.8);
-        }
-
-        /* Grid de Mapas */
-        .section-title {
-            text-align: center;
-            color: var(--orange);
-            margin-top: 50px;
-            text-transform: uppercase;
-        }
-
-        .grid-container {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 20px;
-            padding: 40px;
-            max-width: 1200px;
-            margin: auto;
-        }
-
-        .card {
-            background: var(--card-bg);
-            border-radius: 8px;
-            overflow: hidden;
-            transition: transform 0.3s;
-            border: 1px solid #333;
-        }
-
-        .card:hover {
-            transform: translateY(-10px);
-            border-color: var(--orange);
-        }
-
-        .card img {
-            width: 100%;
-            height: 180px;
-            object-fit: cover;
-        }
-
-        .card-info {
-            padding: 15px;
-        }
-
-        .badge {
-            background: var(--orange);
-            color: black;
-            padding: 2px 8px;
-            font-size: 0.7rem;
-            font-weight: bold;
-            border-radius: 4px;
-        }
-
-        /* Sección de Armas */
-        .weapons-list {
-            background: #16191c;
-            padding: 40px 20px;
-        }
-
-        .weapon-item {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            border-bottom: 1px solid #333;
-            padding: 10px 0;
-            max-width: 800px;
-            margin: auto;
-        }
-
-        .price { color: #2ecc71; font-weight: bold; }
-
-        footer {
-            text-align: center;
-            padding: 50px;
-            color: var(--text-gray);
-        }
-
-        /* Botón Interactiva */
-        .btn-side {
-            background: var(--orange);
-            border: none;
-            padding: 10px 20px;
-            color: black;
-            font-weight: bold;
-            cursor: pointer;
-            border-radius: 5px;
-        }
-    </style>
+    <title>CS2 | Tactical Wiki</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-<nav>
-    <a href="#inicio">Inicio</a>
-    <a href="#mapas">Mapas</a>
-    <a href="#armas">Arsenal</a>
-    <a href="#stats">Estado</a>
-</nav>
+    <nav>
+        <a href="#inicio">Inicio</a>
+        <a href="#mapas">Mapas</a>
+        <a href="#armas">Arsenal</a>
+    </nav>
 
-<section class="hero" id="inicio">
-    <h1>COUNTER-STRIKE 2</h1>
-    <p>El shooter táctico definitivo. Más rápido, más limpio, más letal.</p>
-    <button class="btn-side" onclick="alert('¡Bomba plantada!')">INICIAR PARTIDA</button>
-</section>
+    <header id="inicio">
+        <h1>COUNTER-STRIKE 2</h1>
+        <p>Domina el campo de batalla con estrategia y precisión.</p>
+    </header>
 
-<h2 class="section-title" id="mapas">Pool de Mapas Activo</h2>
-<div class="grid-container">
-    <div class="card">
-        <img src="https://www.counter-strike.net/static/images/cs2/maps/mirage.jpg" alt="Mirage">
-        <div class="card-info">
-            <span class="badge">Competitivo</span>
-            <h3>Mirage</h3>
-            <p>El mapa más jugado del mundo. Domina el medio para ganar.</p>
-        </div>
-    </div>
-    <div class="card">
-        <img src="https://www.counter-strike.net/static/images/cs2/maps/nuke.jpg" alt="Nuke">
-        <div class="card-info">
-            <span class="badge">Estrategia</span>
-            <h3>Nuke</h3>
-            <p>Verticalidad pura. La comunicación es clave en este complejo nuclear.</p>
-        </div>
-    </div>
-    <div class="card">
-        <img src="https://www.counter-strike.net/static/images/cs2/maps/overpass.jpg" alt="Overpass">
-        <div class="card-info">
-            <span class="badge">Táctico</span>
-            <h3>Overpass</h3>
-            <p>Perfecto para jugadas coordinadas con utilidades.</p>
-        </div>
-    </div>
-</div>
+    <main>
+        <section id="mapas">
+            <h2>Mapas de Servicio Activo</h2>
+            
+            <article>
+                <img src="https://www.counter-strike.net/static/images/cs2/maps/mirage.jpg" alt="Mirage">
+                <div>
+                    <h3>Mirage</h3>
+                    <p>El mapa táctico por excelencia. La clave está en el control de conectores y medio.</p>
+                </div>
+            </article>
 
-<section class="weapons-list" id="armas">
-    <h2 class="section-title">Arsenal Seleccionado</h2>
-    <div class="weapon-item">
-        <span>AK-47 | Terrorist</span>
-        <span class="price">$2700</span>
-    </div>
-    <div class="weapon-item">
-        <span>M4A1-S | Counter-Terrorist</span>
-        <span class="price">$2900</span>
-    </div>
-    <div class="weapon-item">
-        <span>AWP | Sniper Rifle</span>
-        <span class="price">$4750</span>
-    </div>
-    <div class="weapon-item">
-        <span>Desert Eagle | Pistol</span>
-        <span class="price">$700</span>
-    </div>
-</section>
+            <article>
+                <img src="https://www.counter-strike.net/static/images/cs2/maps/nuke.jpg" alt="Nuke">
+                <div>
+                    <h3>Nuke</h3>
+                    <p>Famoso por su verticalidad. Los rotaciones rápidas definen al ganador.</p>
+                </div>
+            </article>
+        </section>
 
-<footer>
-    <p>Desarrollado para la comunidad de CS. No oficial de Valve.</p>
-    <p>2026 &copy; TuNombreDeUsuario</p>
-</footer>
+        <section id="armas">
+            <h2>Economía y Arsenal</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Arma</th>
+                        <th>Bando</th>
+                        <th>Precio</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>AK-47</td>
+                        <td>Terroristas</td>
+                        <td>$2700</td>
+                    </tr>
+                    <tr>
+                        <td>M4A1-S</td>
+                        <td>Anti-Terroristas</td>
+                        <td>$2900</td>
+                    </tr>
+                    <tr>
+                        <td>AWP</td>
+                        <td>Ambos</td>
+                        <td>$4750</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Counter-Strike 2 Fan Project. Desarrollado para GitHub Pages.</p>
+    </footer>
 
 </body>
 </html>
