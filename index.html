@@ -1,6 +1,120 @@
 <!DOCTYPE html>
-<html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CS2 | Fan Zone</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #1a1a1a;
+            color: white;
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            background-color: #f39c12;
+            padding: 20px;
+            text-align: center;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.5);
+        }
+        nav {
+            display: flex;
+            justify-content: center;
+            background: #2c3e50;
+            padding: 10px;
+        }
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin: 0 15px;
+            font-weight: bold;
+        }
+        .hero {
+            text-align: center;
+            padding: 50px 20px;
+            background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('https://images.alphacoders.com/133/1331201.jpeg');
+            background-size: cover;
+            background-position: center;
+        }
+        .content {
+            max-width: 900px;
+            margin: 20px auto;
+            padding: 20px;
+            line-height: 1.6;
+        }
+        .stats-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+        .stats-table th, .stats-table td {
+            border: 1px solid #444;
+            padding: 12px;
+            text-align: left;
+        }
+        .stats-table th {
+            background-color: #f39c12;
+            color: black;
+        }
+        footer {
+            text-align: center;
+            padding: 20px;
+            background: #111;
+            font-size: 0.8rem;
+        }
+    </style>
+</head>
 <body>
-  <h1>¡Hola Mundo! Mi sitio en GitHub funciona.</h1>
+
+<header>
+    <h1>COUNTER-STRIKE 2</h1>
+</header>
+
+<nav>
+    <a href="#inicio">Inicio</a>
+    <a href="#mapas">Mapas</a>
+    <a href="#armas">Armas</a>
+</nav>
+
+<section class="hero" id="inicio">
+    <h2>La nueva era del shooter táctico</h2>
+    <p>Bienvenidos a la zona de fans definitiva para jugadores de CS.</p>
+</section>
+
+<div class="content">
+    <h3>Sobre el Juego</h3>
+    <p>Counter-Strike 2 es el avance técnico más importante en la historia de la franquicia, basado en el motor <strong>Source 2</strong>. Humo dinámico, mapas renovados y un sistema de sub-tick que cambia las reglas del juego.</p>
+
+    <h3 id="mapas">Mapas Icónicos</h3>
+    <p>Estos son algunos de los mapas que todo jugador debe dominar:</p>
+    <table class="stats-table">
+        <tr>
+            <th>Mapa</th>
+            <th>Tipo</th>
+            <th>Dificultad</th>
+        </tr>
+        <tr>
+            <td>Dust II</td>
+            <td>Desactivación de bomba</td>
+            <td>Fácil</td>
+        </tr>
+        <tr>
+            <td>Mirage</td>
+            <td>Desactivación de bomba</td>
+            <td>Media</td>
+        </tr>
+        <tr>
+            <td>Inferno</td>
+            <td>Desactivación de bomba</td>
+            <td>Alta</td>
+        </tr>
+    </table>
+</div>
+
+<footer>
+    <p>&copy; 2026 Creado por un Fan del Counter - GitHub Pages</p>
+</footer>
+
 </body>
 </html>
