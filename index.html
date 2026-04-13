@@ -3,88 +3,72 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CS2 | PRO HUB</title>
+    <title>Gabriel Avendaño | Dev Portfolio</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-    <nav>
-        <a href="#inicio">Home</a>
-        <a href="#mapas">Active Duty</a>
-        <a href="#arsenal">Arsenal</a>
-        <a href="#comunidad">Comunidad</a>
-    </nav>
-
-    <header id="inicio">
-        <h1>CS2</h1>
-        <p>STRATEGY . PRECISION . VICTORY</p>
-        <button class="btn-cta">EXPLORAR TÁCTICAS</button>
+    <header>
+        <nav>
+            <div class="logo">G<b>A</b></div>
+            <ul>
+                <li><a href="#sobre-mi">Sobre mí</a></li>
+                <li><a href="#skills">Habilidades</a></li>
+                <li><a href="#contacto">Contacto</a></li>
+            </ul>
+        </nav>
     </header>
 
-    <main>
-        <section id="mapas">
-            <h2>MAPAS OFICIALES</h2>
-            <div class="map-grid">
-                <article>
-                    <img src="https://www.counter-strike.net/static/images/cs2/maps/mirage.jpg" alt="Mirage">
-                    <div>
-                        <h3>Mirage</h3>
-                        <p>Dominio de Medio y ejecuciones en A. El estándar del competitivo.</p>
-                    </div>
-                </article>
-
-                <article>
-                    <img src="https://www.counter-strike.net/static/images/cs2/maps/inferno.jpg" alt="Inferno">
-                    <div>
-                        <h3>Inferno</h3>
-                        <p>Control de Banana y gestión de utilidades en apartamentos.</p>
-                    </div>
-                </article>
-
-                <article>
-                    <img src="https://www.counter-strike.net/static/images/cs2/maps/ancient.jpg" alt="Ancient">
-                    <div>
-                        <h3>Ancient</h3>
-                        <p>Rápido, verde y lleno de ángulos cerrados. El terror de los novatos.</p>
-                    </div>
-                </article>
+    <section class="hero">
+        <div class="hero-content">
+            <h1>Gabriel Avendaño del Castillo</h1>
+            <p class="subtitle">Estudiante de Desarrollo de Software</p>
+            <p class="location">📍 Villa Carlos Paz, Córdoba</p>
+            <div class="cta-container">
+                <a href="mailto:gabiaven2004@gmail.com" class="btn">Enviame un mail</a>
             </div>
-        </section>
+        </div>
+    </section>
 
-        <section id="arsenal">
-            <h2>EQUIPAMIENTO TÁCTICO</h2>
-            <table>
-                <thead>
-                    <tr>
-                        <th>Arma Principal</th>
-                        <th>Rol Recomendado</th>
-                        <th>Costo</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td>AK-47</td>
-                        <td>Entry Fragger</td>
-                        <td>$2700</td>
-                    </tr>
-                    <tr>
-                        <td>M4A1-S</td>
-                        <td>Anchor / Support</td>
-                        <td>$2900</td>
-                    </tr>
-                    <tr>
-                        <td>AWP</td>
-                        <td>Sniper / Pick</td>
-                        <td>$4750</td>
-                    </tr>
-                </tbody>
-            </table>
-        </section>
-    </main>
+    <section id="sobre-mi" class="container">
+        <h2>Sobre mí</h2>
+        <div class="bio">
+            <p>
+                Hola, soy Gabriel. Actualmente estoy sumergido en el mundo del desarrollo de software, 
+                buscando aprender y construir soluciones eficientes. Me apasiona entender cómo funcionan 
+                las cosas desde la base hasta la interfaz de usuario.
+            </p>
+        </div>
+    </section>
 
-    <footer>
-        <p>ESTADO DE LOS SERVIDORES: <span style="color: #2ecc71;">ONLINE</span></p>
-        <p>Diseñado para los amantes del Counter-Strike. 2026.</p>
+    <section id="skills" class="container bg-light">
+        <h2>Mis Habilidades</h2>
+        <div class="grid">
+            <div class="skill-card">
+                <div class="icon">🌐</div>
+                <h3>Desarrollo Web</h3>
+                <p>HTML5, CSS3 y JavaScript.</p>
+            </div>
+            <div class="skill-card">
+                <div class="icon">⚙️</div>
+                <h3>Software & Backend</h3>
+                <p>C# y C++.</p>
+            </div>
+        </div>
+    </section>
+
+    <footer id="contacto">
+        <h2>¿Hablamos?</h2>
+        <p>Siempre estoy abierto a nuevos proyectos y aprendizaje.</p>
+        <a href="mailto:gabiaven2004@gmail.com" class="email-link">gabiaven2004@gmail.com</a>
+        
+        <div class="socials">
+            <a href="#" target="_blank">LinkedIn</a>
+            <a href="#" target="_blank">GitHub</a>
+        </div>
+        
+        <p class="copy">&copy; 2026 Gabriel Avendaño. Villa Carlos Paz, Argentina.</p>
     </footer>
 
 </body>
